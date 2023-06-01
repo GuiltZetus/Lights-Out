@@ -7,17 +7,23 @@ namespace Cainos.PixelArtTopDown_Basic
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
+        public float maxHP = 100;
+        public float currentHP;
+        public HealthBar hpbar;
 
         private Animator animator;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
+            currentHP = maxHP;
+            hpbar.setMaxHP(maxHP);
         }
 
-
+        
         private void Update()
         {
+            //player movement
             Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A))
             {
@@ -45,6 +51,17 @@ namespace Cainos.PixelArtTopDown_Basic
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
+
+            //player hp
+            if (Input.GetKeyDown(KeyCode.Space) && currentHP > 0)
+            {
+                takeDamage(20);
+            }
+        }
+        private void takeDamage(float damage)
+        {
+            currentHP -= damage;
+            hpbar.setHP(currentHP);
         }
     }
 }
