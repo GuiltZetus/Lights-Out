@@ -10,6 +10,7 @@ namespace Cainos.PixelArtTopDown_Basic
         public float maxHP = 100;
         public float currentHP;
         public HealthBar hpbar;
+        [SerializeField] public int damageTaken = 20;
 
         private Animator animator;
 
@@ -55,7 +56,7 @@ namespace Cainos.PixelArtTopDown_Basic
             //player hp
             if (Input.GetKeyDown(KeyCode.Space) && currentHP > 0)
             {
-                takeDamage(20);
+                takeDamage(damageTaken);
             }
         }
         private void takeDamage(float damage)
