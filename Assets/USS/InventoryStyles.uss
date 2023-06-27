@@ -1,0 +1,13 @@
+.header_main {
+    font-size: 30px;
+    color: rgba(210, 210, 210, 255);
+}
+
+.btn-main {
+    flex-grow: 0;
+    width: auto;
+    height: 30px;
+    font-size: 24px;
+    background-image: url('project://database/Assets/Arts/GUI/GUI.png?fileID=-1065024174&guid=28ef6f5939868e14da0e6f2658dc5d19&type=3#GUI_21');
+    position: relative;
+}

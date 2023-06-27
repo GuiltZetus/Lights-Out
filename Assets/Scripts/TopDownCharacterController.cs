@@ -11,6 +11,9 @@ namespace Cainos.PixelArtTopDown_Basic
         public float currentHP;
         public HealthBar hpbar;
 
+        public GameObject inventoryUI;
+        private bool inventoryActive = false;
+
         private Animator animator;
 
         private void Start()
@@ -46,11 +49,16 @@ namespace Cainos.PixelArtTopDown_Basic
                 dir.y = -1;
                 animator.SetInteger("Direction", 0);
             }
-
             dir.Normalize();
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
+
+            //Open Inventory
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                ToggleInventory();
+            }
 
             //player hp
             if (Input.GetKeyDown(KeyCode.Space) && currentHP > 0)
@@ -62,6 +70,11 @@ namespace Cainos.PixelArtTopDown_Basic
         {
             currentHP -= damage;
             hpbar.setHP(currentHP);
+        }
+        public void ToggleInventory()
+        {
+            inventoryActive = !inventoryActive;
+            inventoryUI.SetActive(inventoryActive);
         }
     }
 }
