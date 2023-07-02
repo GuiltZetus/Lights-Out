@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-/*public class ItemVisual : VisualElement
+public class ItemVisual : VisualElement
 {
     private readonly ItemDefinition m_Item;
     public ItemVisual(ItemDefinition item)
@@ -11,9 +11,9 @@ using UnityEngine.UIElements;
         m_Item = item;
         name = $"{m_Item.FriendlyName}";
         style.height = m_Item.SlotDimension.Height *
-           PlayerInventory.SlotDimension.Height;
+            PlayerInventory.SlotDimension.Height;
         style.width = m_Item.SlotDimension.Width *
-           PlayerInventory.SlotDimension.Width;
+            PlayerInventory.SlotDimension.Width;
         style.visibility = Visibility.Hidden;
         VisualElement icon = new VisualElement
         {
@@ -23,9 +23,9 @@ using UnityEngine.UIElements;
         icon.AddToClassList("visual-icon");
         AddToClassList("visual-icon-container");
     }
-public void SetPosition(Vector2 pos)
+    public void SetPosition(Vector2 pos)
     {
         style.left = pos.x;
         style.top = pos.y;
     }
-}*/
+}
