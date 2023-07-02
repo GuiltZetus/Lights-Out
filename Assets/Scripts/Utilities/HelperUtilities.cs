@@ -30,8 +30,7 @@ public class HelperUtilities : MonoBehaviour
             Debug.Log(fieldName + " is null in object " + thisObject.name.ToString());
             return true;
         }
-
-
+        
         foreach (var item in enumerableObjectToCheck)
         {
 
