@@ -10,6 +10,7 @@ namespace Cainos.PixelArtTopDown_Basic
         public float maxHP = 100;
         public float currentHP;
         public HealthBar hpbar;
+        public Transform bulletSpawnPoint;
         [SerializeField] public int damageTaken = 20;
 
         private Animator animator;
@@ -19,6 +20,7 @@ namespace Cainos.PixelArtTopDown_Basic
             animator = GetComponent<Animator>();
             currentHP = maxHP;
             hpbar.setMaxHP(maxHP);
+            bulletSpawnPoint = transform.Find("bulletSpawnpoint");
         }
 
         
