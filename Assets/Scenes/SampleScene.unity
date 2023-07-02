@@ -5148,6 +5148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StoredItems:
   - Details: {fileID: 11400000, guid: bba64157de252dd428ec62ef2f10c719, type: 2}
+  - Details: {fileID: 11400000, guid: bba64157de252dd428ec62ef2f10c719, type: 2}
+  - Details: {fileID: 11400000, guid: 3135f69267f71934f83552d70b714e0a, type: 2}
   InventoryDimensions:
     Height: 6
     Width: 9

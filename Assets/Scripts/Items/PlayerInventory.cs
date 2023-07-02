@@ -33,9 +33,10 @@ public sealed class PlayerInventory : MonoBehaviour
         m_Root = GetComponentInChildren<UIDocument>().rootVisualElement;
         m_InventoryGrid = m_Root.Q<VisualElement>("Grid");
         VisualElement itemDetails = m_Root.Q<VisualElement>("ItemDetails");
-        m_ItemDetailHeader = itemDetails.Q<Label>("Header");
-        m_ItemDetailBody = itemDetails.Q<Label>("Body");
+        m_ItemDetailHeader = itemDetails.Q<Label>("FriendlyName");
+        m_ItemDetailBody = itemDetails.Q<Label>("Description");
         m_ItemDetailPrice = itemDetails.Q<Label>("SellPrice");
+        ConfigureInventoryTelegraph();
         await UniTask.WaitForEndOfFrame();
         ConfigureSlotDimensions();
         m_IsInventoryReady = true;
@@ -103,6 +104,53 @@ public sealed class PlayerInventory : MonoBehaviour
     {
         item.RootVisual = visual;
         visual.style.visibility = Visibility.Visible;
+    }
+    private VisualElement m_Telegraph;
+    private void ConfigureInventoryTelegraph()//highlight the grid that the item will be moved to
+    {
+        m_Telegraph = new VisualElement
+        {
+            name = "Telegraph",
+            style =
+        {
+            position = Position.Absolute,
+            visibility = Visibility.Hidden
+        }
+        };
+        m_Telegraph.AddToClassList("slot-icon-highlighted");
+        AddItemToInventoryGrid(m_Telegraph);
+    }
+    public (bool canPlace, Vector2 position) ShowPlacementTarget(ItemVisual draggedItem)
+    {
+        if (!m_InventoryGrid.layout.Contains(new Vector2(draggedItem.localBound.xMax,
+            draggedItem.localBound.yMax)))
+        {
+            m_Telegraph.style.visibility = Visibility.Hidden;
+            return (canPlace: false, position: Vector2.zero);
+        }
+        VisualElement targetSlot = m_InventoryGrid.Children().Where(x =>
+            x.layout.Overlaps(draggedItem.layout) && x != draggedItem).OrderBy(x =>
+            Vector2.Distance(x.worldBound.position,
+            draggedItem.worldBound.position)).First();
+        m_Telegraph.style.width = draggedItem.style.width;
+        m_Telegraph.style.height = draggedItem.style.height;
+        SetItemPosition(m_Telegraph, new Vector2(targetSlot.layout.position.x,
+            targetSlot.layout.position.y));
+        m_Telegraph.style.visibility = Visibility.Visible;
+        var overlappingItems = StoredItems.Where(x => x.RootVisual != null &&
+            x.RootVisual.layout.Overlaps(m_Telegraph.layout)).ToArray();
+        if (overlappingItems.Length > 1)
+        {
+            m_Telegraph.style.visibility = Visibility.Hidden;
+            return (canPlace: false, position: Vector2.zero);
+        }
+        return (canPlace: true, targetSlot.worldBound.position);
+    }
+    public static void UpdateItemDetails(ItemDefinition item)//show the item details in the description
+    {
+        m_ItemDetailHeader.text = item.FriendlyName;
+        m_ItemDetailBody.text = item.Description;
+        m_ItemDetailPrice.text = item.SellPrice.ToString();
     }
 }
 

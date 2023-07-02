@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 589dca73767acf346827a4eadad15cd8, type: 3}
-  m_Name: coint
+  m_Name: coin
   m_EditorClassIdentifier: 
   ID: 2deab2ee-14a5-4e36-801b-ac0af329f516
-  FriendlyName: 
-  Description: 
-  SellPrice: 0
-  Icon: {fileID: 0}
+  FriendlyName: coin
+  Description: penis
+  SellPrice: 1
+  Icon: {fileID: 21300000, guid: 57111f533119fa640a2c7c8f0469ae31, type: 3}
   SlotDimension:
-    Height: 0
-    Width: 0
+    Height: 1
+    Width: 1

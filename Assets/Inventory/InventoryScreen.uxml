@@ -3,9 +3,9 @@
     <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgb(116, 49, 19); background-image: url(&apos;project://database/Assets/Arts/GUI/InvenBackground.png?fileID=21300000&amp;guid=0bb829c82ffd3944d8628bf49e95107c&amp;type=3#InvenBackground&apos;); height: 800px; width: 1600px; margin-left: 150px; margin-right: 150px; margin-top: 100px; margin-bottom: 100px;">
         <ui:VisualElement name="Header" class="header_main" style="flex-direction: row; height: 10%; width: 100%; margin-top: 10px; margin-left: 10px; padding-top: 0;">
             <ui:Label text="INVENTORY" display-tooltip-when-elided="true" name="lbl_Header" enable-rich-text="true" style="align-items: center; flex-grow: 1; -unity-text-align: middle-center; justify-content: flex-start; padding-top: 5px; width: 397px; font-size: 50px;" />
-            <ui:VisualElement name="Container_Currency" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center; height: 49px; width: 128px; margin-top: 25px;">
-                <ui:VisualElement name="Icon" style="background-image: url(&apos;project://database/Assets/Arts/Shikashi&apos;s%20Fantasy%20Icons%20Pack%20v2/Shikashi&apos;s%20Fantasy%20Icons%20Pack%20v2/%232%20-%20Transparent%20Icons%20&amp;%20Drop%20Shadow.png?fileID=-1565479075&amp;guid=e0e51f28943da4d46a196c79fda9ab2a&amp;type=3#2 - Transparent Icons &amp; Drop Shadow_166&apos;); width: 45px; height: 45px;" />
-                <ui:Label text="123" display-tooltip-when-elided="true" name="Value" class="header_main" style="font-size: 38px;" />
+            <ui:VisualElement name="Container_Currency" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center; height: 49px; width: 128px; margin-top: 25px; -unity-text-align: upper-left;">
+                <ui:VisualElement name="Icon" style="width: 45px; height: 45px; background-image: url(&apos;project://database/Assets/Arts/GUI/coin.png?fileID=21300000&amp;guid=57111f533119fa640a2c7c8f0469ae31&amp;type=3#coin&apos;); justify-content: center;" />
+                <ui:Label text="123" display-tooltip-when-elided="true" name="Value" class="header_main" style="font-size: 38px; justify-content: center;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row-reverse; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
@@ -83,5 +83,4 @@
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement style="position: absolute; background-color: rgba(0, 0, 0, 0.62);" />
 </ui:UXML>
