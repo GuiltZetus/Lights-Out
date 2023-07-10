@@ -21,6 +21,8 @@ public sealed class PlayerInventory : MonoBehaviour
             Destroy(this);
         }
     }
+    
+    private ItemVisual m_DraggedItem;
     private VisualElement m_Root;
     private VisualElement m_InventoryGrid;
     private static Label m_ItemDetailHeader;
@@ -28,6 +30,28 @@ public sealed class PlayerInventory : MonoBehaviour
     private static Label m_ItemDetailPrice;
     private bool m_IsInventoryReady;
     public static Dimensions SlotDimension { get; private set; }
+
+    public void SetDraggedItem(ItemVisual item)
+    {
+        m_DraggedItem = item;
+    }
+    public ItemVisual GetDraggedItem()
+    {
+        return m_DraggedItem;
+    }
+    private void Update()
+    {
+        // Check for key input to rotate the item
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("E is pressed, swapping item dimensions");
+            ItemVisual draggedItem = GetDraggedItem();
+            if (draggedItem != null)
+            {
+                draggedItem.SwapDimensions();
+            }
+        }
+    }
     private async void Configure()
     {
         m_Root = GetComponentInChildren<UIDocument>().rootVisualElement;
@@ -59,9 +83,10 @@ public sealed class PlayerInventory : MonoBehaviour
             for (int x = 0; x < InventoryDimensions.Width; x++)
             {
                 //try position
-                SetItemPosition(newItem, new Vector2(SlotDimension.Width * x,
-                    SlotDimension.Height * y));
+                SetItemPosition(newItem, new Vector2(SlotDimension.Width * x,SlotDimension.Height * y));
+
                 await UniTask.WaitForEndOfFrame();
+
                 StoredItem overlappingItem = StoredItems.FirstOrDefault(s =>
                     s.RootVisual != null &&
                     s.RootVisual.layout.Overlaps(newItem.layout));
@@ -121,37 +146,45 @@ public sealed class PlayerInventory : MonoBehaviour
         AddItemToInventoryGrid(m_Telegraph);
     }
     public (bool canPlace, Vector2 position) ShowPlacementTarget(ItemVisual draggedItem)
+{
+    if (!m_InventoryGrid.layout.Contains(new Vector2(draggedItem.localBound.xMax,
+        draggedItem.localBound.yMax)))
     {
-        if (!m_InventoryGrid.layout.Contains(new Vector2(draggedItem.localBound.xMax,
-            draggedItem.localBound.yMax)))
-        {
-            m_Telegraph.style.visibility = Visibility.Hidden;
-            return (canPlace: false, position: Vector2.zero);
-        }
-        VisualElement targetSlot = m_InventoryGrid.Children().Where(x =>
-            x.layout.Overlaps(draggedItem.layout) && x != draggedItem).OrderBy(x =>
-            Vector2.Distance(x.worldBound.position,
-            draggedItem.worldBound.position)).First();
-        m_Telegraph.style.width = draggedItem.style.width;
-        m_Telegraph.style.height = draggedItem.style.height;
-        SetItemPosition(m_Telegraph, new Vector2(targetSlot.layout.position.x,
-            targetSlot.layout.position.y));
-        m_Telegraph.style.visibility = Visibility.Visible;
-        var overlappingItems = StoredItems.Where(x => x.RootVisual != null &&
-            x.RootVisual.layout.Overlaps(m_Telegraph.layout)).ToArray();
-        if (overlappingItems.Length > 1)
-        {
-            m_Telegraph.style.visibility = Visibility.Hidden;
-            return (canPlace: false, position: Vector2.zero);
-        }
-        return (canPlace: true, targetSlot.worldBound.position);
+        m_Telegraph.style.visibility = Visibility.Hidden;
+        return (canPlace: false, position: Vector2.zero);
     }
+
+    VisualElement targetSlot = m_InventoryGrid.Children().Where(x =>
+        x.layout.Overlaps(draggedItem.layout) && x != draggedItem).OrderBy(x =>
+        Vector2.Distance(x.worldBound.position, draggedItem.worldBound.position)).First();
+
+    m_Telegraph.style.width = draggedItem.style.width;
+    m_Telegraph.style.height = draggedItem.style.height;
+
+    // Update the telegraph position with the target slot's position
+    SetItemPosition(m_Telegraph, new Vector2(targetSlot.layout.position.x,
+        targetSlot.layout.position.y));
+
+    m_Telegraph.style.visibility = Visibility.Visible;
+
+    var overlappingItems = StoredItems.Where(x => x.RootVisual != null &&
+        x.RootVisual.layout.Overlaps(m_Telegraph.layout)).ToArray();
+
+    if (overlappingItems.Length > 1)
+    {
+        m_Telegraph.style.visibility = Visibility.Hidden;
+        return (canPlace: false, position: Vector2.zero);
+    }
+
+    return (canPlace: true, targetSlot.worldBound.position);
+}
     public static void UpdateItemDetails(ItemDefinition item)//show the item details in the description
     {
         m_ItemDetailHeader.text = item.FriendlyName;
         m_ItemDetailBody.text = item.Description;
         m_ItemDetailPrice.text = item.SellPrice.ToString();
     }
+
 }
 
 
