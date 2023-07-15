@@ -30,7 +30,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
 
         // Load the room node type list
         LoadRoomNodeTypeList();
-
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
     }
 
 
@@ -526,10 +526,14 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         room.templateID = roomTemplate.guid;
         room.id = roomNode.id;
         room.prefab = roomTemplate.prefab;
+        room.battleMusic = roomTemplate.battleMusic;
+        room.ambientMusic = roomTemplate.ambientMusic;
         room.roomNodeType = roomTemplate.roomNodeType;
         room.lowerBounds = roomTemplate.lowerBounds;
         room.upperBounds = roomTemplate.upperBounds;
         room.spawnPositionArray = roomTemplate.spawnPositionArray;
+        room.enemiesByLevelList = roomTemplate.enemiesByLevelList;
+        room.roomLevelEnemySpawnParametersList = roomTemplate.roomEnemySpawnParametersList;
         room.templateLowerBounds = roomTemplate.lowerBounds;
         room.templateUpperBounds = roomTemplate.upperBounds;
         room.childRoomIDList = CopyStringList(roomNode.childRoomNodeIDList);
@@ -541,10 +545,20 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             room.parentRoomID = "";
             room.isPreviouslyVisited = true;
 
+            // Set entrance in game manager
+            GameManager.Instance.SetCurrentRoom(room);
+
         }
         else
         {
             room.parentRoomID = roomNode.parentRoomNodeIDList[0];
+        }
+
+
+        // If there are no enemies to spawn then default the room to be clear of enemies
+        if (room.GetNumberOfEnemiesToSpawn(GameManager.Instance.GetCurrentDungeonLevel()) == 0)
+        {
+            room.isClearedOfEnemies = true;
         }
 
 
@@ -617,6 +631,34 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     /// </summary>
     private void InstantiateRoomGameobjects()
     {
+        // Iterate through all dungeon rooms.
+        foreach (KeyValuePair<string, Room> keyvaluepair in dungeonBuilderRoomDictionary)
+        {
+            Room room = keyvaluepair.Value;
+
+            // Calculate room position (remember the room instantiatation position needs to be adjusted by the room template lower bounds)
+            Vector3 roomPosition = new Vector3(room.lowerBounds.x - room.templateLowerBounds.x, room.lowerBounds.y - room.templateLowerBounds.y, 0f);
+
+            // Instantiate room
+            GameObject roomGameobject = Instantiate(room.prefab, roomPosition, Quaternion.identity, transform);
+
+            // Get instantiated room component from instantiated prefab.
+            InstantiatedRoom instantiatedRoom = roomGameobject.GetComponentInChildren<InstantiatedRoom>();
+
+            instantiatedRoom.room = room;
+
+            // Initialise The Instantiated Room
+            instantiatedRoom.Initialise(roomGameobject);
+
+            // Save gameobject reference.
+            room.instantiatedRoom = instantiatedRoom;
+
+            //// Demo code to set rooms as cleared - except for boss
+            //if (!room.roomNodeType.isBossRoom)
+            //{
+            //    room.isClearedOfEnemies = true;
+            //}
+        }
     }
 
 

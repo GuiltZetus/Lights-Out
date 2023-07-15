@@ -9,7 +9,7 @@ namespace Cainos.PixelArtTopDown_Basic
         public float speed;
         public float maxHP = 100;
         public float currentHP;
-        public HealthBar hpbar;
+        public PlayerHealthBar hpbar;
 
         private Animator animator;
 

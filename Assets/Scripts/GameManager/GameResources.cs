@@ -42,6 +42,15 @@ public class GameResources : MonoBehaviour
     [Space(10)]
     [Header("PLAYER")]
     #endregion Header PLAYER
+    #region Tooltip
+    [Tooltip("Player details list - populate the list with the playerdetails scriptable objects")]
+    #endregion Tooltip
+    public List<PlayerDetailsSO> playerDetailsList;
+    #region Tooltip
+    [Tooltip("The current player scriptable object - this is used to reference the current player between scenes")]
+    #endregion Tooltip
+    public CurrentPlayerSO currentPlayer;
+
     #region Header MUSIC
     [Space(10)]
     [Header("MUSIC")]
@@ -50,6 +59,10 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with the music master mixer group")]
     #endregion
     public AudioMixerGroup musicMasterMixerGroup;
+    #region Tooltip
+    [Tooltip("Main menu music scriptable object")]
+    #endregion Tooltip
+    public MusicTrackSO mainMenuMusic;
     #region Tooltip
     [Tooltip("music on full snapshot")]
     #endregion Tooltip
@@ -71,6 +84,30 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with the sounds master mixer group")]
     #endregion
     public AudioMixerGroup soundsMasterMixerGroup;
+    #region Tooltip
+    [Tooltip("Door open close sound effect")]
+    #endregion Tooltip
+    public SoundEffectSO doorOpenCloseSoundEffect;
+    #region Tooltip
+    [Tooltip("Populate with the table flip sound effect")]
+    #endregion
+    public SoundEffectSO tableFlip;
+    #region Tooltip
+    [Tooltip("Populate with the chest open sound effect")]
+    #endregion
+    public SoundEffectSO chestOpen;
+    #region Tooltip
+    [Tooltip("Populate with the health pickup sound effect")]
+    #endregion
+    public SoundEffectSO healthPickup;
+    #region Tooltip
+    [Tooltip("Populate with the weapon pickup sound effect")]
+    #endregion
+    public SoundEffectSO weaponPickup;
+    #region Tooltip
+    [Tooltip("Populate with the ammo pickup sound effect")]
+    #endregion
+    public SoundEffectSO ammoPickup;
 
     #region Header MATERIALS
     [Space(10)]
@@ -159,7 +196,16 @@ public class GameResources : MonoBehaviour
     {
         HelperUtilities.ValidateCheckNullValue(this, nameof(roomNodeTypeList), roomNodeTypeList);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerSelectionPrefab), playerSelectionPrefab);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(playerDetailsList), playerDetailsList);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(currentPlayer), currentPlayer);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(mainMenuMusic), mainMenuMusic);
         HelperUtilities.ValidateCheckNullValue(this, nameof(soundsMasterMixerGroup), soundsMasterMixerGroup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(doorOpenCloseSoundEffect), doorOpenCloseSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(tableFlip), tableFlip);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(chestOpen), chestOpen);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(healthPickup), healthPickup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ammoPickup), ammoPickup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(weaponPickup), weaponPickup);
         HelperUtilities.ValidateCheckNullValue(this, nameof(litMaterial), litMaterial);
         HelperUtilities.ValidateCheckNullValue(this, nameof(dimmedMaterial), dimmedMaterial);
         HelperUtilities.ValidateCheckNullValue(this, nameof(variableLitShader), variableLitShader);
