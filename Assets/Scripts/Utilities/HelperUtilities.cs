@@ -18,6 +18,19 @@ public class HelperUtilities : MonoBehaviour
     }
     
     /// <summary>
+    /// null value debug check
+    /// </summary>
+    public static bool ValidateCheckNullValue(Object thisObject, string fieldName, UnityEngine.Object objectToCheck)
+    {
+        if (objectToCheck == null)
+        {
+            Debug.Log(fieldName + " is null and must contain a value in object " + thisObject.name.ToString());
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
     /// list empty or contains null value check - returns true if there is an error
     /// </summary>
     public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)
