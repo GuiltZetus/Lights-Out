@@ -89,7 +89,7 @@ and then round it up with Int so you get the position of the slot (i don't have 
 
     public bool PlaceItem(InventoryItem inventoryItem, int posX, int posY, ref InventoryItem overlapItem)
     {
-        if (BoundaryCheck(posX, posY, inventoryItem.WIDTH, inventoryItem.WIDTH) == false)
+        if (BoundaryCheck(posX, posY, inventoryItem.WIDTH, inventoryItem.HEIGHT) == false)
         {
             //check if the object is outside the inventory boundary or not
             return false;
@@ -210,6 +210,10 @@ and then round it up with Int so you get the position of the slot (i don't have 
         }
 
         return true;
+    }
+    public void checking()
+    {
+        Debug.Log("yeah the script is active");
     }
 }
  

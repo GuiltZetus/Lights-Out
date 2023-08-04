@@ -18,6 +18,7 @@ public class InventoryController : MonoBehaviour // this script is responsible f
 
     InventoryItem selectedItem;
     InventoryItem overlapItem;
+    ItemGrid itemGrid;
     RectTransform rectTransform;
 
     [SerializeField] List<ItemData> items;
@@ -55,6 +56,10 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         if(Input.GetKeyDown(KeyCode.I))
         {
             InventoryObject.SetActive(!InventoryObject.activeSelf);
+        }
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            itemGrid.checking();
         }
         if (selectedItemGrid == null)
         {
