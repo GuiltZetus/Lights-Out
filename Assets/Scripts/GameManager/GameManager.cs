@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cainos.PixelArtTopDown_Basic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -56,6 +57,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private Room currentRoom;
     private Room previousRoom;
     private PlayerDetailsSO playerDetails;
+    private TopDownCharacterController topDownCharacterController;
     private Player player;
 
     [HideInInspector] public GameState gameState;

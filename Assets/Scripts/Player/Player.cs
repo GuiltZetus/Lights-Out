@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cainos.PixelArtTopDown_Basic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -43,6 +44,7 @@ using UnityEngine.Rendering;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerDetailsSO playerDetails;
+    [HideInInspector] public TopDownCharacterController PlayerTopDownCharacterController;
     [HideInInspector] public HealthEvent healthEvent;
     [HideInInspector] public Health health;
     [HideInInspector] public DestroyedEvent destroyedEvent;
@@ -99,6 +101,11 @@ public class Player : MonoBehaviour
         SetPlayerHealth();
     }
 
+    public void Initialize(TopDownCharacterController player)
+    {
+        this.PlayerTopDownCharacterController = player;
+    }
+    
     private void OnEnable()
     {
         // Subscribe to player health event

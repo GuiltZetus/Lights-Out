@@ -17,6 +17,7 @@ public class RoomNodeGraphEditor : EditorWindow
 
     // Node layout values
     private const float nodeWidth = 160f;
+
     private const float nodeHeight = 75f;
     private const int nodePadding = 25;
     private const int nodeBorder = 12;
