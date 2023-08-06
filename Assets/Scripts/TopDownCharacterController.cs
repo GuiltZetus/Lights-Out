@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,10 @@ namespace Cainos.PixelArtTopDown_Basic
         public float speed;
         public float maxHP = 100;
         public float currentHP;
-        public HealthBar hpbar;
+        public HealthBar_Topdown hpbar;
+        public Transform bulletSpawnPoint;
+        [SerializeField] public int damageTaken = 20;
+
         private Animator animator;
         public GameObject inventoryUI;
 
