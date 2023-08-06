@@ -26,4 +26,8 @@ public class GridInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Debug.Log("Mouse exit");
         inventoryController.SelectedItemGrid = null;
     }
+    public void OnDisable()
+    {
+        inventoryController.SelectedItemGrid = null;
+    }
 }
