@@ -10,11 +10,9 @@ namespace Cainos.PixelArtTopDown_Basic
         public float maxHP = 100;
         public float currentHP;
         public HealthBar_Topdown hpbar;
-        public Transform bulletSpawnPoint;
         [SerializeField] public int damageTaken = 20;
 
         private Animator animator;
-        public GameObject inventoryUI;
 
         private void Start()
         {
