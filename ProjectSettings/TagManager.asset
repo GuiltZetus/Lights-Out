@@ -21,6 +21,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
+  - Bullet
+  - Terrain
   - 
   - IgnoreAmmo
   - Camera 1

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,9 @@ namespace Cainos.PixelArtTopDown_Basic
         public float speed;
         public float maxHP = 100;
         public float currentHP;
-        public PlayerHealthBar hpbar;
+        public HealthBar hpbar;
+        public Transform bulletSpawnPoint;
+        [SerializeField] public int damageTaken = 20;
 
         private Animator animator;
 
@@ -18,6 +20,7 @@ namespace Cainos.PixelArtTopDown_Basic
             animator = GetComponent<Animator>();
             currentHP = maxHP;
             hpbar.setMaxHP(maxHP);
+            bulletSpawnPoint = transform.Find("bulletSpawnpoint");
         }
 
         
@@ -55,7 +58,7 @@ namespace Cainos.PixelArtTopDown_Basic
             //player hp
             if (Input.GetKeyDown(KeyCode.Space) && currentHP > 0)
             {
-                takeDamage(20);
+                takeDamage(damageTaken);
             }
         }
         private void takeDamage(float damage)
