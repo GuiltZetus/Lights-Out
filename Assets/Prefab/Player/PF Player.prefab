@@ -137,6 +137,7 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 0
   hpbar: {fileID: 0}
+  inventoryUI: {fileID: 0}
 --- !u!212 &5628018141983903107
 SpriteRenderer:
   m_ObjectHideFlags: 0

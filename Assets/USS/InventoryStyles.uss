@@ -1,0 +1,40 @@
+.header_main {
+    font-size: 30px;
+    color: rgb(210, 210, 210);
+}
+
+.btn-main {
+    flex-grow: 0;
+    width: auto;
+    height: 30px;
+    font-size: 24px;
+    background-image: url('project://database/Assets/Arts/GUI/GUI.png?fileID=-1065024174&guid=28ef6f5939868e14da0e6f2658dc5d19&type=3#GUI_21');
+    position: relative;
+}
+
+.invenSlot {
+    width: 60px;
+    height: 60px;
+}
+.visual-icon-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-width: 1px;
+    border-color: rgb(75, 75, 75);
+
+}
+.visual-icon {
+    height: 100%;
+    width: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+.slot-icon-highlighted {
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    transform-origin: center;
+    position: absolute;
+    visibility: hidden;
+}
