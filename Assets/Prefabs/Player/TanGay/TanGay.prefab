@@ -138,7 +138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
+      objectReference: {fileID: 9100000, guid: eb1ae3e395b532e4d8dbc08a412e4a7d, type: 2}
     - target: {fileID: 4886237443457582248, guid: 07626fcdb44819245851b34ee3d8c4b0,
         type: 3}
       propertyPath: m_Enabled
@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 4886237443457582251, guid: 07626fcdb44819245851b34ee3d8c4b0,
         type: 3}
       propertyPath: m_Name
-      value: TheGeneral 2
+      value: TanGay
       objectReference: {fileID: 0}
     - target: {fileID: 4886237443564654882, guid: 07626fcdb44819245851b34ee3d8c4b0,
         type: 3}
