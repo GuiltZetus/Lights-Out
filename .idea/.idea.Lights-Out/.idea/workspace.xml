@@ -3,12 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="34cca27e-4fd2-4e5b-9833-8d297b8d961c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lights-Out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lights-Out/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/GUI/HPBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/GUI/HPBar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/GUI/HPBorder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/GUI/HPBorder.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/HoangAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HoangAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/HoangAssets/Textures/Minimap/Minimap Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HoangAssets/Textures/Minimap/Minimap Render Texture.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HoangAssets/Textures/Sprite Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HoangAssets/Textures/Sprite Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TanGay/TanGay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TanGay/TanGay.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/PF Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/PF Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TanGay/TheGeneral.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TanGay/TheGeneral.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TanGay.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TanGay.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest &amp; Loot/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest &amp; Loot/ChestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthBar_Topdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar_Topdown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/GridInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/GridInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownCharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/82/137c6cf0/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthBar_Topdown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>

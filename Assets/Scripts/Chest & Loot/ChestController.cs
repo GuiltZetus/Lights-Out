@@ -40,6 +40,7 @@ public class ChestController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         isOpen = false;
+        SetInteractable(false);
         ChestInventory.SetActive(false);
         PlayerInventory.SetActive(false);
         Debug.Log("Player too far, closing chest");

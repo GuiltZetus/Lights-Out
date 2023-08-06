@@ -36,7 +36,7 @@ public class InventoryController : MonoBehaviour // this script is responsible f
     private void Update()
     {
         ItemIconDrag();
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             if(selectedItem == null)
             {
@@ -48,7 +48,7 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         {
             InsertRandomItem();
         }
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.Q))
         {
             RotateItem();
         }

@@ -48,11 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-<<<<<<< HEAD
   spriteBorder: {x: 1, y: 2, z: 4, w: 2}
-=======
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> Dang
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -112,11 +108,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-<<<<<<< HEAD
     internalID: 1537655665
-=======
-    internalID: 0
->>>>>>> Dang
     vertices: []
     indices: 
     edges: []

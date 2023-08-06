@@ -10,18 +10,15 @@ namespace Cainos.PixelArtTopDown_Basic
         public float maxHP = 100;
         public float currentHP;
         public HealthBar_Topdown hpbar;
-        public Transform bulletSpawnPoint;
         [SerializeField] public int damageTaken = 20;
 
         private Animator animator;
-        public GameObject inventoryUI;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
             currentHP = maxHP;
             hpbar.setMaxHP(maxHP);
-            bulletSpawnPoint = transform.Find("bulletSpawnpoint");
         }
 
         
@@ -58,7 +55,7 @@ namespace Cainos.PixelArtTopDown_Basic
             //player hp
             if (Input.GetKeyDown(KeyCode.Space) && currentHP > 0)
             {
-                takeDamage(damageTaken);
+                takeDamage(20);
             }
 
             //player inventory
