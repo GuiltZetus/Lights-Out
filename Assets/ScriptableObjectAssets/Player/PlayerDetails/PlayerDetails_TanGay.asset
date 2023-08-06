@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d000594b3451c442b14b022db09cabe, type: 3}
   m_Name: PlayerDetails_TanGay
   m_EditorClassIdentifier: 
-  playerCharacterName: The General
+  playerCharacterName: TanGay
   playerPrefab: {fileID: 4223291587891147767, guid: b74b3cc6f492c24428d83a0ebc0d096f,
     type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: eb1ae3e395b532e4d8dbc08a412e4a7d,
