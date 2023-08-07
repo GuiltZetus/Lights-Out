@@ -7,6 +7,8 @@ public class InventoryController : MonoBehaviour // this script is responsible f
 {
     [HideInInspector]
     private ItemGrid selectedItemGrid;
+
+    public bool isInventoryOpen = false;
     public ItemGrid SelectedItemGrid { 
         get => selectedItemGrid;
         set 
@@ -18,6 +20,7 @@ public class InventoryController : MonoBehaviour // this script is responsible f
 
     InventoryItem selectedItem;
     InventoryItem overlapItem;
+    public GameObject gameCursor;
     ItemGrid itemGrid;
     RectTransform rectTransform;
 
@@ -55,9 +58,19 @@ public class InventoryController : MonoBehaviour // this script is responsible f
 
         if(Input.GetKeyDown(KeyCode.I))
         {
-            InventoryObject.SetActive(!InventoryObject.activeSelf);
+            ToggleInventory();
+            if(isInventoryOpen == true)
+            {
+                gameCursor.SetActive(false);
+                Cursor.visible = true;
+            }
+            else
+            {
+                gameCursor.SetActive(true);
+                Cursor.visible = false;
+            }
         }
-        if(Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             itemGrid.checking();
         }
@@ -74,6 +87,13 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         {
             LeftMouseButtonPress();
         }
+    }
+
+    private bool ToggleInventory()
+    {
+        InventoryObject.SetActive(!isInventoryOpen);
+        isInventoryOpen = InventoryObject.activeSelf;
+        return isInventoryOpen;
     }
 
     private void RotateItem()
