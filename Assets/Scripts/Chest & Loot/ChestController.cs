@@ -22,7 +22,7 @@ public class ChestController : MonoBehaviour
     {
         isOpen = isOpen ? false : true;
         ChestInventory.SetActive(!ChestInventory.activeSelf);
-        PlayerInventory.SetActive(!PlayerInventory.activeSelf);
+        //PlayerInventory.SetActive(!PlayerInventory.activeSelf);
         Debug.Log("Toggling chest");
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,7 +42,7 @@ public class ChestController : MonoBehaviour
         isOpen = false;
         SetInteractable(false);
         ChestInventory.SetActive(false);
-        PlayerInventory.SetActive(false);
+        //PlayerInventory.SetActive(false);
         Debug.Log("Player too far, closing chest");
     }
 

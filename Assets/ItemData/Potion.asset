@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  Name: Potion
   itemIcon: {fileID: -1412254234, guid: e0e51f28943da4d46a196c79fda9ab2a, type: 3}
   DarkBG: {fileID: 0}
+  dropChance: 100

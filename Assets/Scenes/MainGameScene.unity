@@ -2067,7 +2067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &584716802
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3993,6 +3993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69be386246f572f488b49b8f7af4fd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasTransform: {fileID: 0}
+  lootItemPrefab: {fileID: 0}
+  lootList: []
   gridWidth: 9
   gridHeight: 6
 --- !u!114 &1129521078

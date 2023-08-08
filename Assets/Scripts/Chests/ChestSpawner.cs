@@ -4,6 +4,7 @@ using UnityEngine;
 public class ChestSpawner : MonoBehaviour
 {
     [System.Serializable]
+
     private struct RangeByLevel
     {
         public DungeonLevelSO dungeonLevel;
@@ -130,10 +131,14 @@ public class ChestSpawner : MonoBehaviour
     /// <summary>
     /// Spawn the chest prefab
     /// </summary>
+    ItemGrid itemGrid;
+    GameObject ItemGrid;
+    ItemGrid selectedItemGrid;
     private void SpawnChest()
     {
         chestSpawned = true;
-
+        ItemGrid = GameObject.Find("ChestGrid");
+        selectedItemGrid = ItemGrid.GetComponent<ItemGrid>();
         // Should chest be spawned based on specified chance? If not return.
         if (!RandomSpawnChest()) return;
 
@@ -173,6 +178,14 @@ public class ChestSpawner : MonoBehaviour
             // use materialize effect
             chest.Initialize(true, GetHealthPercentToSpawn(healthNum), GetWeaponDetailsToSpawn(weaponNum), GetAmmoPercentToSpawn(ammoNum));
         }
+        ChestController chestController = FindObjectOfType<ChestController>();
+
+        // Set the value of PlayerInventory to the "Inventory" object
+        if (chestController != null)
+        {
+            chestController.PlayerInventory = GameObject.Find("Inventory");
+        }
+        itemGrid.CreateLoot();
     }
 
     /// <summary>
@@ -295,6 +308,13 @@ public class ChestSpawner : MonoBehaviour
 
         return weaponDetails;
     }
+
+    /*public void InsertLootIntoChest()
+    {
+        InventoryItem itemToInsert = selectedItem;
+        selectedItem = null;
+        InsertItem(itemToInsert);
+    }*/
 
     #region Validation
 #if UNITY_EDITOR

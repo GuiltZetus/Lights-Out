@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 2
   height: 3
+  Name: HighPotion
   itemIcon: {fileID: -453183339, guid: e0e51f28943da4d46a196c79fda9ab2a, type: 3}
   DarkBG: {fileID: 0}
+  dropChance: 50
