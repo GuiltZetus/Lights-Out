@@ -7627,6 +7627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenCursor
       objectReference: {fileID: 0}
+    - target: {fileID: 175292956544735765, guid: 52d7312fead1b754184cf49894de2b2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 175292956544735978, guid: 52d7312fead1b754184cf49894de2b2d,
         type: 3}
       propertyPath: m_Pivot.x
