@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ScreenCursor : MonoBehaviour
 {
+    public static ScreenCursor instance;
+    public string  s;
     private void Awake()
     {
         // Set hardware cursor off
         Cursor.visible = false;
+        instance = this;
     }
 
     private void Update()
