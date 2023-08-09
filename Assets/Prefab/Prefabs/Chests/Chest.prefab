@@ -97,9 +97,9 @@ GameObject:
   - component: {fileID: 4860969148900597584}
   - component: {fileID: 881897591642852438}
   - component: {fileID: 627040367597440893}
-  - component: {fileID: 515853767797724491}
   - component: {fileID: 6631797888406441937}
   - component: {fileID: 3656365511357633822}
+  - component: {fileID: 1893149200762820073}
   m_Layer: 5
   m_Name: ChestGrid
   m_TagString: Untagged
@@ -185,18 +185,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18, type: 2}
   gridWidth: 3
   gridHeight: 6
---- !u!114 &515853767797724491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774973094071483059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d994280ecbeeb441a1fbf7ffc4851db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &6631797888406441937
 Canvas:
   m_ObjectHideFlags: 0
@@ -235,6 +223,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1893149200762820073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774973094071483059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d994280ecbeeb441a1fbf7ffc4851db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2205099077288419615
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
+  lootPopulated: 0
   interactionDistance: 2
   Interactable: 0
   ChestInventory: {fileID: 5093483038430180743}

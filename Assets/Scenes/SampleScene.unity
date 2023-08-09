@@ -1047,11 +1047,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574e1f59817aca145a81eca9f817fa27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedItemGrid: {fileID: 2111494662}
   isInventoryOpen: 0
   gameCursor: {fileID: 0}
   items:
   - {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18, type: 2}
   - {fileID: 11400000, guid: 10ecd8b716d650f44abd9bc15a8cf187, type: 2}
+  - {fileID: 11400000, guid: ca9fda5c77f123848b0d4738c27a09a4, type: 2}
   itemPrefab: {fileID: 4414064352641222664, guid: e4d336cccdd0ec34dafc485de14a115c,
     type: 3}
   InventoryObject: {fileID: 157128521}
@@ -1725,9 +1727,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
         type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 4414064352641222664, guid: e4d336cccdd0ec34dafc485de14a115c,
+        type: 3}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: InventoryObject
+      value: 
+      objectReference: {fileID: 157128521}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
       propertyPath: PlayerInventory
       value: 
       objectReference: {fileID: 157128521}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: canvasTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: items.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: selectedItemGrid
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10ecd8b716d650f44abd9bc15a8cf187,
+        type: 2}
+    - target: {fileID: 4809059291781905232, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18,
+        type: 2}
     - target: {fileID: 4809059291781905237, guid: 034c28e14cb4adb4c8df9cfb82779f46,
         type: 3}
       propertyPath: m_RootOrder
@@ -1736,12 +1776,12 @@ PrefabInstance:
     - target: {fileID: 4809059291781905237, guid: 034c28e14cb4adb4c8df9cfb82779f46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.73
+      value: 2.934
       objectReference: {fileID: 0}
     - target: {fileID: 4809059291781905237, guid: 034c28e14cb4adb4c8df9cfb82779f46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4809059291781905237, guid: 034c28e14cb4adb4c8df9cfb82779f46,
         type: 3}
@@ -1788,6 +1828,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 4809059291905049965, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: lootItemPrefab
+      value: 
+      objectReference: {fileID: 4414064352641222664, guid: e4d336cccdd0ec34dafc485de14a115c,
+        type: 3}
+    - target: {fileID: 4809059291905049965, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: canvasTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809059291905049965, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: lootList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809059291905049965, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: lootList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10ecd8b716d650f44abd9bc15a8cf187,
+        type: 2}
+    - target: {fileID: 4809059291905049965, guid: 034c28e14cb4adb4c8df9cfb82779f46,
+        type: 3}
+      propertyPath: lootList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 034c28e14cb4adb4c8df9cfb82779f46, type: 3}
 --- !u!1 &1849334571
@@ -1825,7 +1893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1225, y: 1019}
+  m_AnchoredPosition: {x: 1991, y: 646}
   m_SizeDelta: {x: 38.4, y: 38.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849334573
@@ -7708,7 +7776,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111494660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d994280ecbeeb441a1fbf7ffc4851db, type: 3}
   m_Name: 
@@ -7725,6 +7793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69be386246f572f488b49b8f7af4fd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasTransform: {fileID: 0}
+  lootItemPrefab: {fileID: 0}
   gridWidth: 9
   gridHeight: 6
 --- !u!114 &2111494663

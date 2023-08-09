@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88d8f3e1ca51b3140a9e8b08ff5fee21, type: 3}
-  m_Name: Potion
+  m_Name: Wand
   m_EditorClassIdentifier: 
   width: 1
-  height: 1
-  ID: small_potion
-  Name: Potion
-  itemIcon: {fileID: -1412254234, guid: e0e51f28943da4d46a196c79fda9ab2a, type: 3}
+  height: 3
+  ID: red_wand
+  Name: Wand
+  itemIcon: {fileID: 1619574019, guid: cffedb69b3f022a43a7b0e724737123c, type: 3}
   DarkBG: {fileID: 0}
-  dropChance: 100
+  dropChance: 25

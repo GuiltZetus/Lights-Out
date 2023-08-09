@@ -3993,9 +3993,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69be386246f572f488b49b8f7af4fd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasTransform: {fileID: 0}
-  lootItemPrefab: {fileID: 0}
-  lootList: []
+  canvasTransform: {fileID: 1129521073}
+  lootItemPrefab: {fileID: 4414064352641222664, guid: e4d336cccdd0ec34dafc485de14a115c,
+    type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 10ecd8b716d650f44abd9bc15a8cf187, type: 2}
+  - {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18, type: 2}
   gridWidth: 9
   gridHeight: 6
 --- !u!114 &1129521078

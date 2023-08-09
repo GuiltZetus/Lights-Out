@@ -14,7 +14,6 @@ public class ItemGrid : MonoBehaviour
 
     [SerializeField] Transform canvasTransform;
     public GameObject lootItemPrefab;
-    public List<ItemData> lootList = new List<ItemData>(); 
 
 
     [SerializeField] int gridWidth = 9; 
@@ -55,47 +54,6 @@ public class ItemGrid : MonoBehaviour
     internal InventoryItem GetItem(int x, int y)
     {
         return inventoryItemSlot[x, y];
-    }
-
-    List<ItemData> GetDroppedItems()
-    {
-        int randomNumber; 
-        List<ItemData> possibleItem = new List<ItemData>();
-        foreach(ItemData item in lootList)
-        {
-            randomNumber = UnityEngine.Random.Range(1, 101); //1-101
-            if (randomNumber <= item.dropChance)
-            {
-                possibleItem.Add(item);
-                Debug.Log("Some item dropped");                              
-            }
-        }
-        return possibleItem;// will return an empty List if no item is dropped
-    }
-
-    public void CreateLoot()
-    {
-        List<ItemData> droppedItems = GetDroppedItems();
-        if (droppedItems.Count > 0)
-        {
-            foreach (ItemData droppedItemData in droppedItems)
-            {
-                CreateItem(droppedItemData);
-                InventoryItem itemToInsert = selectedItem;
-                selectedItem = null;
-                inventoryController.InsertItem(itemToInsert);
-            }
-        }
-    }
-
-    private void CreateItem(ItemData droppedItemData)
-    {
-        InventoryItem inventoryItem = Instantiate(lootItemPrefab).GetComponent<InventoryItem>();
-        selectedItem = inventoryItem;
-        rectTransform = inventoryItem.GetComponent<RectTransform>();
-        rectTransform.SetParent(canvasTransform);
-
-        inventoryItem.Set(droppedItemData);
     }
 
     Vector2 positionOnTheGrid = new Vector2();
