@@ -70,10 +70,6 @@ public class InventoryController : MonoBehaviour // this script is responsible f
                 Cursor.visible = false;
             }
         }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            itemGrid.checking();
-        }
         if (selectedItemGrid == null)
         {
             inventoryHighlight.Show(false);
@@ -115,7 +111,7 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         InsertItem(itemToInsert);
     }
 
-    private void InsertItem(InventoryItem itemToInsert)
+    public void InsertItem(InventoryItem itemToInsert)
     {
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
         if(posOnGrid == null)
