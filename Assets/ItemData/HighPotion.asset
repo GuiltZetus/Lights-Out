@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: HighPotion
   m_EditorClassIdentifier: 
   width: 2
-  height: 3
+  height: 2
+  ID: big_potion
   Name: HighPotion
   itemIcon: {fileID: -453183339, guid: e0e51f28943da4d46a196c79fda9ab2a, type: 3}
   DarkBG: {fileID: 0}

@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d8f3e1ca51b3140a9e8b08ff5fee21, type: 3}
-  m_Name: Potion
+  m_Script: {fileID: 11500000, guid: 8aa02b5f38b87ea488e333fb4114abda, type: 3}
+  m_Name: potion
   m_EditorClassIdentifier: 
-  width: 1
-  height: 1
   ID: small_potion
-  Name: Potion
-  itemIcon: {fileID: -1412254234, guid: e0e51f28943da4d46a196c79fda9ab2a, type: 3}
-  DarkBG: {fileID: 0}
-  dropChance: 100
+  lootSprite: {fileID: -326674857, guid: cffedb69b3f022a43a7b0e724737123c, type: 3}
+  lootName: Potion
+  dropChance: 80

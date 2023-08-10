@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour // this script is responsible for all of the player interaction with the Inventory
 {
-    [HideInInspector]
-    private ItemGrid selectedItemGrid;
+    [SerializeField] ItemGrid selectedItemGrid;
 
     public bool isInventoryOpen = false;
     public ItemGrid SelectedItemGrid { 
@@ -61,13 +60,13 @@ public class InventoryController : MonoBehaviour // this script is responsible f
             ToggleInventory();
             if(isInventoryOpen == true)
             {
-                gameCursor.SetActive(false);
+                //gameCursor.SetActive(false);
                 Cursor.visible = true;
             }
             else
             {
-                gameCursor.SetActive(true);
-                Cursor.visible = false;
+                //gameCursor.SetActive(true);
+                //Cursor.visible = false;
             }
         }
         if (selectedItemGrid == null)
@@ -77,9 +76,16 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         }
 
         //Debug.Log(selectedItemGrid.GetTileGridPosition(Input.mousePosition));
-        HandleHighlight();
+        if(selectedItem != null)
+        {
+            HandleHighlight();
+        }
+        else
+        {
+            inventoryHighlight.Show(false);
+        }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isInventoryOpen == true)
         {
             LeftMouseButtonPress();
         }
@@ -101,7 +107,23 @@ public class InventoryController : MonoBehaviour // this script is responsible f
         selectedItem.Rotate();
     }
 
-    private void InsertRandomItem()
+    /*public void CreateLoot()
+    {
+        if (selectedItemGrid == null) { return; }
+        List<ItemData> droppedItems = itemGrid.GetDroppedItems();
+        Debug.Log(droppedItems);
+        if (droppedItems.Count > 0)
+        {
+            foreach (ItemData droppedItemData in droppedItems)
+            {
+                itemGrid.CreateItem(droppedItemData);
+                InventoryItem itemToInsert = selectedItem;
+                selectedItem = null;
+                InsertItem(itemToInsert);
+            }
+        }
+    }*/
+    public void InsertRandomItem()
     {
         if (selectedItemGrid == null) { return; }
 

@@ -8,6 +8,7 @@ public class ItemData : ScriptableObject
     public int width;
     public int height;
 
+    public string ID;
     public string Name;
     public Sprite itemIcon;
     public Sprite DarkBG;
