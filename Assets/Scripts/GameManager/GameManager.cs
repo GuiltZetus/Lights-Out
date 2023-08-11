@@ -9,6 +9,8 @@ using UnityEngine.UI;
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonobehaviour<GameManager>
 {
+    [SerializeField] private bool canEnterBossRoom = false;
+
     #region Header GAMEOBJECT REFERENCES
     [Space(10)]
     [Header("GAMEOBJECT REFERENCES")]
@@ -725,10 +727,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0") + "\n\n" + rankText, Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
+        //yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
 
         // Set game state to restart game
         gameState = GameState.restartGame;
+        
+        // Restart the game
+        RestartGame();
     }
 
     /// <summary>
@@ -736,7 +741,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     /// </summary>
     private void RestartGame()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MainMenuScene"); 
     }
 
     /// <summary>

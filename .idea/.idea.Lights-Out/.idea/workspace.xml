@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34cca27e-4fd2-4e5b-9833-8d297b8d961c" name="Changes" comment="" />
+    <list default="true" id="34cca27e-4fd2-4e5b-9833-8d297b8d961c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheScientist.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheScientist/TheScientist.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheScientist/TheScientist.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheThief.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheThief/TheThief.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TheThief/TheThief.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheScientist.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheScientist.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheThief.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheThief.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lights-Out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lights-Out/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HoangAssets/Shaders/DungeonLightShader_Dimmed.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HoangAssets/Shaders/DungeonLightShader_Dimmed.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Chests/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Chests/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TanGay/TanGay.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Prefabs/Player/TanGay/TanGay.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Level1/RoomNodeGraph_Level1_1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Levels/DungeonLevel_Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Levels/DungeonLevel_Level1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TanGay.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TanGay.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Player/Pistol/AmmoDetails_Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Player/Pistol/AmmoDetails_Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +50,7 @@
     </favorite-branches>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/80/39df2a54/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/82/137c6cf0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity Editor/Metroidvania/Assets/Script/PlayerScript/PlayerHealth.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,6 +153,8 @@
       <workItem from="1690635337573" duration="1436000" />
       <workItem from="1691336380221" duration="815000" />
       <workItem from="1691417493374" duration="999000" />
+      <workItem from="1691732838656" duration="274000" />
+      <workItem from="1691751748848" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="import HoangAssets.meta. Create A Simple Editor Window">
       <created>1687427175383</created>

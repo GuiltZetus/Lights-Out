@@ -180,9 +180,6 @@ MonoBehaviour:
   canvasTransform: {fileID: 4467934005605945008}
   lootItemPrefab: {fileID: 4414064352641222664, guid: e4d336cccdd0ec34dafc485de14a115c,
     type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 10ecd8b716d650f44abd9bc15a8cf187, type: 2}
-  - {fileID: 11400000, guid: 18d2de91edc4fac41bff9672d2bcad18, type: 2}
   gridWidth: 3
   gridHeight: 6
 --- !u!223 &6631797888406441937
@@ -489,11 +486,11 @@ GameObject:
   - component: {fileID: -6491421054169797704}
   - component: {fileID: 6220298256710840965}
   - component: {fileID: 4971834854438660013}
+  - component: {fileID: 7820751221871917531}
   - component: {fileID: 9074222329994553272}
   - component: {fileID: 8715277695446743007}
   - component: {fileID: 4278971917248247530}
   - component: {fileID: 4531493442038823954}
-  - component: {fileID: 7820751221871917531}
   - component: {fileID: 172229316144287247}
   m_Layer: 17
   m_Name: Chest
@@ -561,7 +558,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005580187, y: 0.9171839}
+  m_Offset: {x: -0.04292071, y: 0.9171839}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -572,7 +569,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7075362, y: 1.9543676}
+  m_Size: {x: 1.9898822, y: 1.9543676}
+  m_EdgeRadius: 0
+--- !u!61 &7820751221871917531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138935252998904426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009055853, y: 2.0081005}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.009201, y: 7.89209}
   m_EdgeRadius: 0
 --- !u!50 &9074222329994553272
 Rigidbody2D:
@@ -683,32 +706,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &7820751221871917531
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138935252998904426}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.009055853, y: 2.0081005}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.009201, y: 7.89209}
-  m_EdgeRadius: 0
 --- !u!114 &172229316144287247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,11 +719,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
-  lootPopulated: 0
-  interactionDistance: 2
   Interactable: 0
-  ChestInventory: {fileID: 5093483038430180743}
-  PlayerInventory: {fileID: 0}
+  lootPrefab: {fileID: 0}
+  lootList: []
 --- !u!1 &6589260663313139575
 GameObject:
   m_ObjectHideFlags: 0
